@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700&family=DM+Serif+Display&family=Josefin+Slab:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400&family=Mulish:ital,wght@0,200;0,300;0,400;1,200;1,300&family=Poppins:wght@300;400&display=swap');
+
+
+.App {
+  display: grid;
+  grid-template-columns: 1fr 3.5fr;
+  grid-template-areas: "navbar home";
+}
+
+.sidebar{
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(32, 33, 35, 1);
+  height: 100vh;
+  position: sticky;
+  grid-area: navbar;
+  box-sizing: border-box;
+  padding: 1rem;
+}
+.chat{
+  cursor: pointer;
+  font-family: 'Mulish', sans-serif;
+  font-size: .8rem;
+  display: flex;
+  align-items: center;
+  color: white;
+  gap: 1rem;
+  box-shadow: rgba(241, 238, 238, 0.02) 0px 1px 3px 0px, rgba(214, 218, 222, 0.15) 0px 0px 0px 1px;
+  padding: .5rem;
+  border-radius: .5rem;
+  box-sizing: border-box;
+  height: 50px;
+  transition: all 0.3s;
+  letter-spacing: .1rem;
+}
+.chat:hover{
+  background-color: #353740;
+}
+.delete{
+  cursor: pointer;
+  font-family: 'Mulish', sans-serif;
+  font-size: .9rem;
+  display: flex;
+  align-items: center;
+  color: white;
+  gap: 1rem;
+  cursor: pointer;
+  padding-left: .5rem;
+}
+.border{
+  width: 100%;
+  border: .5px solid hsla(0,0%,100%,.2);
+}
+.data{
+  height: 50%;
+}
+.data2{
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  
+  justify-content: space-between;
+}
+.home{
+   grid-area: home;
+   background-color: #353740;
+   position: relative;
+}
+.form{
+  position: absolute;
+  width: 60%;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  
+}
+.form input{
+  box-sizing: border-box;
+  height: 2.5rem;
+  width: 100%;
+  padding: 1rem;
+  outline: none;
+  border: none;
+  box-shadow: rgba(221, 223, 224, 0.3) 0px 1px 2px 0px, rgba(238, 241, 244, 0.15) 0px 2px 6px 2px;
+  border-color: rgba(32,33,35,.5);
+  border-radius: .5rem;
+  background-color: #353740;
+  color:white;
+  font-size: 1rem;
+ 
+}
+.message{
+  position: absolute;
+  vertical-align: middle;
+  top: 50%;
+  right: 2%;
+  transform: translate(-50%,-2%);
+  rotate: 90deg;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
