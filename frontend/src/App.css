@@ -19,8 +19,7 @@
 }
 .chat{
   cursor: pointer;
-  font-family: 'Mulish', sans-serif;
-  font-size: .8rem;
+  font-size: .9rem;
   display: flex;
   align-items: center;
   color: white;
@@ -31,7 +30,6 @@
   box-sizing: border-box;
   height: 50px;
   transition: all 0.3s;
-  letter-spacing: .1rem;
 }
 .chat:hover{
   background-color: #353740;
