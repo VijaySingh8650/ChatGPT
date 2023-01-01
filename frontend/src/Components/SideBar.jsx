@@ -6,19 +6,22 @@ import logOut from "../Assets/logOut.svg";
 import openai from "../Assets/openai.svg";
 import update from "../Assets/update.svg";
 import deleteIcon from "../Assets/delete.svg";
+import { useNavigate } from 'react-router-dom';
 
 const SideBar = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="sidebar">
-      <div className='data'>
-        <div className="chat">
+      <div className="data">
+        <div className="chat" onClick={() => navigate('/chat')}>
           <img src={plus} alt="plus" />
           New chat
         </div>
         <div className="container"></div>
       </div>
-      <div className='data2'>
-        <div className='border'></div>
+      <div className="data2">
+        <div className="border"></div>
         <div className="delete">
           <img src={deleteIcon} alt="deleteIcon" />
           Clear conversations
@@ -35,7 +38,7 @@ const SideBar = () => {
           <img src={update} alt="deleteIcon" />
           Update & FAQ
         </div>
-        <div className="delete">
+        <div className="delete" onClick={() => navigate('/login')}>
           <img src={logOut} alt="deleteIcon" />
           Log out
         </div>
