@@ -2,6 +2,7 @@
 *{
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 /* width */
 ::-webkit-scrollbar {
@@ -90,7 +91,8 @@
   justify-content: space-between;
 }
 .home{
-   grid-area: home;
+  width: 100%;
+  grid-area: home;
    background-color: #353740;
    position: relative;
 }
@@ -118,6 +120,8 @@
  
 }
 .message{
+  background-color: transparent;
+  border: none;
   position: absolute;
   vertical-align: middle;
   top: 50%;
@@ -275,4 +279,122 @@
   color: white;
   font-family: 'Mulish', sans-serif;
 }
+.question{
+  box-sizing: border-box;
+  width: 100%;
+  background-color: #343541;
+  color: white;
+  padding: 1rem 2rem;
+  padding-left: 20%;
+  border-bottom: .2px solid rgb(52, 51, 51);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
 
+.question > div{
+  width: 30px;
+  padding: .2rem;
+  background-color: #19c37d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: .3rem;
+}
+.question > div>img{
+  width: 100%;
+}
+.answer > div:nth-child(1) >img{
+  
+  width: 100%;
+}
+.answer > div:nth-child(1){
+  width: 30px;
+  padding: .2rem;
+  background-color: #19c37d;
+  display: flex;
+  align-items: center;
+  border-radius: .3rem;
+}
+.answer{
+  box-sizing: border-box;
+  width: 100%;
+  background-color: #444654;
+  color: white;
+  padding: 1rem 2rem;
+  padding-left: 20%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.loading{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  
+}
+
+.loading>div{
+  background-color: white;
+  border-radius: 50%;
+  height: 5px;
+  width: 5px;
+}
+.loading > div:nth-child(1){
+  opacity: 0;
+  animation: dance1 .3s infinite ease-in-out;
+
+}
+.loading > div:nth-child(2){
+  opacity: 0;
+  animation: dance2 .3s infinite ease-in-out;
+}
+.loading > div:nth-child(3){
+  opacity: 0;
+  animation: dance3 .3s infinite ease-in-out;
+}
+@keyframes dance1 {
+  0%{
+     opacity: 0;
+  }
+  25%{
+    opacity: .3;
+  }
+  50%{
+    opacity: .8;
+  }
+  100%{
+    opacity: 0;
+  }
+  
+}
+@keyframes dance2 {
+  0%{
+     opacity: 0;
+  }
+  25%{
+    opacity: .5;
+  }
+  50%{
+    opacity: .9;
+  }
+  100%{
+    opacity: 0;
+  }
+  
+}
+@keyframes dance3 {
+  0%{
+     opacity: 0;
+  }
+  25%{
+    opacity: .8;
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+  
+}
