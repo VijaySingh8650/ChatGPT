@@ -7,14 +7,20 @@ import openai from "../Assets/openai.svg";
 import update from "../Assets/update.svg";
 import deleteIcon from "../Assets/delete.svg";
 import { useNavigate } from 'react-router-dom';
+import { defaultChat } from '../Store/ChatData/chatdata.action';
+import { useDispatch } from 'react-redux';
 
 const SideBar = () => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   return (
     <div className="sidebar">
       <div className="data">
-        <div className="chat" onClick={() => navigate('/chat')}>
+        <div className="chat" onClick={() => {
+          dispatch(defaultChat());
+          navigate('/');
+        }}>
           <img src={plus} alt="plus" />
           New chat
         </div>

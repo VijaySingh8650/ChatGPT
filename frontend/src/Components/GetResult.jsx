@@ -6,22 +6,28 @@ import { useRef } from 'react';
 import { useEffect } from 'react';
 
 
+
 const GetResult = ({ data }) => {
   const { loading, result } = useSelector(store => store.chat);
-  
+
+  console.log(result, "result");
   let text = useRef("");
+  let index = useRef(0);
+  let interval = useRef("");
 
   useEffect(() => {
-    let index = 0;
-    let interval = setInterval(() => {
-      if (index < result.length) {
-        text.current += result.charAt(index);
-        index++;
+    interval.current = setInterval(() => {
+      if (index.current < result.length) {
+        // text.current += result.charAt(index.current);
+        console.log("indside result");
+        text.current += result.charAt(index.current);
+        
+        index.current++;
       } else {
-        clearInterval(interval);
+        clearInterval(interval.current);
       }
-    }, 20)
-  }, [result]);
+    }, 20);
+  }, []);
 
   return (
     <div>
@@ -38,14 +44,14 @@ const GetResult = ({ data }) => {
           <img src={bot} alt="bot" className="bot" />
         </div>
         <div>
-          {loading && <div className='loading'>
+          {loading ? (<div className='loading'>
           <div></div>
           <div></div>
           <div></div>
-          </div>
+          </div>) : result
           }
-          {!loading && text.current}
-          {console.log(text.current)}
+          
+          {console.log(result, "render")}
         </div>
       </div>
     </div>

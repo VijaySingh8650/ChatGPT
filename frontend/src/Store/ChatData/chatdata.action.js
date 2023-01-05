@@ -1,5 +1,5 @@
 import axios from "axios";
-import { chatData_Error, chatData_Loading, chatData_Success } from "./chatdata.types";
+import { chatData_Default, chatData_Error, chatData_Loading, chatData_Success } from "./chatdata.types";
 
 
 export const postTheData = (data) => async (dispatch) => {
@@ -13,3 +13,5 @@ export const postTheData = (data) => async (dispatch) => {
         dispatch({ type: chatData_Error });
     }
 }
+
+export const defaultChat = () => (dispatch) => dispatch({ type: chatData_Default });

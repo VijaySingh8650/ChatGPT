@@ -294,6 +294,7 @@
 
 .question > div{
   width: 30px;
+  
   padding: .2rem;
   background-color: #19c37d;
   display: flex;
@@ -310,11 +311,15 @@
 }
 .answer > div:nth-child(1){
   width: 30px;
+  height: 30px;
   padding: .2rem;
   background-color: #19c37d;
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   border-radius: .3rem;
+}
+.answer > div:nth-child(2){
+  width: 80%;
 }
 .answer{
   box-sizing: border-box;
@@ -324,7 +329,7 @@
   padding: 1rem 2rem;
   padding-left: 20%;
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   gap: 1rem;
 }
 .loading{

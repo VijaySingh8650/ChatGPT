@@ -1,4 +1,4 @@
-import { chatData_Error, chatData_Loading, chatData_Success } from "./chatdata.types"
+import { chatData_Default, chatData_Error, chatData_Loading, chatData_Success } from "./chatdata.types"
 
 const initialValue = {
     loading: false,
@@ -26,6 +26,13 @@ export const chatDataReducer = (state = initialValue, { type, payload }) => {
                 loading: false,
                 error: false,
                 result:payload
+            }
+        }
+        case chatData_Default: {
+            return {
+                loading: false,
+                error: false,
+                result:""
             }
         }
         default: return state;
